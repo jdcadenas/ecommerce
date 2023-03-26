@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product, Category
 
-def product_detail(request, category_slug,slug):
+def product_detail(request,category_slug,slug):
   product = get_object_or_404(Product, slug=slug)
   
   context = {

@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
+    <title>{% block title %}{% endblock  %} E-commerce
+  </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   </head>
   <body>
@@ -54,7 +55,9 @@
             {% for category in menu_cateories %}
              <a href="{% url 'category_detail' category.slug %}" class="navbar-item">{{ category.title }} </a>
             {% endfor %}
-            
+            <div class="navbar-item">
+              <a href=" {% url 'cart' %}" class="button is-primary">Cart</a>
+            </div>
           </div>
         </div>
       </div>
