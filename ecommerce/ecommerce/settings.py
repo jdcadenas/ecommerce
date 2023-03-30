@@ -27,6 +27,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+#Cart
+SESSION_COOKIE_AGE = 1209600
+CART_SESSION_ID = 'cart'
 
 # Application definition
 
