@@ -32,7 +32,15 @@ def api_add_to_cart(request):
     cart.add(product=product, quantity=quantity, update_quantity=True)
   
   return JsonResponse(jsonResponse)
-
+def api_increment_quantity(request):
+  data=json.loads(request.body)
+  jsonResponse = {'succes': True }
+  product_id = data['product_id']
+  
+  cart = Cart(request)
+  
+  
+  
 def api_remove_from_cart(request):
   data=json.loads(request.body)
   jsonResponse = {'succes': True }

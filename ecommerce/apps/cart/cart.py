@@ -74,3 +74,6 @@ class Cart(object):
           print('product_id:', product_id)
           del self.cart[product_id]
           self.save()
+  
+  def get_total_length(self):
+    return sum(int(item['quantity']) for item in self.cart.values())
